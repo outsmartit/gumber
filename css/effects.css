@@ -1,0 +1,87 @@
+.cs-style-5 figure{
+	position: relative;
+}
+.cs-style-5 figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    left: 25px;
+}
+.cs-style-5 figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+/*    background: #2c3f52;*/
+    color: #ed4e6e;
+}
+.cs-style-5 figure img {
+    z-index: 10;
+    transition: transform 0.4s;
+}
+.no-touch .cs-style-5 figure:hover img,
+.cs-style-5 figure.cs-hover img {
+    transform: scale(0.35);
+
+}
+.cs-style-5 figcaption {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.7);
+    backface-visibility: hidden;
+    transition: transform 0.4s, opacity 0.4s;
+}
+.no-touch .cs-style-5 figure:hover figcaption,
+.cs-style-5 figure.cs-hover figcaption {
+    transform: scale(1);
+    opacity: 1;
+}
+.cs-style-5 figure a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.cs-style-5 h3{
+	text-align: left;
+	font-size: 1.2rem;
+
+}
+.cs-style-5{
+	text-align: left;
+	font-size: 15px;
+}
+.cs-style-didi figure{
+    position: relative;
+}
+.cs-style-didi figcaption {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 20px;
+    color: #ed4e6e;
+}
+.cs-style-didi figure img {
+    z-index: 10;
+    transition: transform 0.4s;
+}
+.cs-style-didi figcaption {
+ /*   height: 100%;
+    width: 100%;*/
+    opacity: 0;
+    transform: scale(0.7);
+    backface-visibility: hidden;
+    transition: transform 0.4s, opacity 0.4s;
+}
+.no-touch .cs-style-didi figure:hover img,
+.cs-style-didi figure.cs-hover img {
+  /*  transform: scale(0.35);*/
+    opacity: 0.2;
+    z-index: 0;
+
+}
+.no-touch .cs-style-didi figure:hover figcaption{
+    opacity: 1;
+    transform : scale(1.2);
+    transition: transform 0.4s, opacity 0.4s;
+}

@@ -1,0 +1,168 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 3, 2015, 10:01:36 PM
+    Author     : diederik
+    Basic styling for the Gumber  template
+*/
+.tooltip {
+	position: absolute;
+	z-index: 103000;
+	display: block;
+	visibility: visible;
+	font-size: 11px;
+	line-height: 1.4;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.tooltip.in {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.tooltip.top {
+	margin-top: -3px;
+	padding: 5px 0;
+}
+.tooltip.right {
+	margin-left: 3px;
+	padding: 0 5px;
+}
+.tooltip.bottom {
+	margin-top: 3px;
+	padding: 5px 0;
+}
+.tooltip.left {
+	margin-left: -3px;
+	padding: 0 5px;
+}
+.tooltip-inner {
+	max-width: 200px;
+	padding: 8px;
+	color: #d04526;
+	text-align: left;
+	text-decoration: none;
+	background-color: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.tooltip-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+	bottom: 0;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px 5px 0;
+	border-top-color: lightcoral;
+}
+.tooltip.right .tooltip-arrow {
+	top: 50%;
+	left: 0;
+	margin-top: -5px;
+	border-width: 5px 5px 5px 0;
+	border-right-color: #000;
+}
+.tooltip.left .tooltip-arrow {
+	top: 50%;
+	right: 0;
+	margin-top: -5px;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #000;
+}
+.tooltip.bottom .tooltip-arrow {
+	top: 0;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 0 5px 5px;
+	border-bottom-color: #000;
+}
+.element-invisible {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+#filter-search {
+	vertical-align: top;
+}
+.input-mini {
+	width: 60px;
+}
+
+.navbar {
+    background: none repeat scroll 0 0 white;
+    display: block;
+    margin: 27px auto 20px;
+    min-height: 60px;
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    z-index: 100;
+}
+
+.navbar ul li > a {
+    color: #d04526;
+    display: block;
+    font-size: 1.2rem;
+    height: 60px;
+    line-height: 58px;
+    padding: 0 16px;
+    text-shadow: none;
+    white-space: nowrap;
+}
+ul.actions{
+    float: right;
+    margin-top: 1.5rem;
+    padding-right: 15px;
+}
+ul.social li, ul.actions li, ul.pagenav li, ul.inline li{
+    display: inline;
+}
+li.createdby, li.author, li.category-name, li.published, li.hits, .actions a{
+    font-size: 0.75rem;
+}
+.article-info{
+    line-height: 1.1rem;
+}
+ul.article-info{
+    margin-bottom: 0.8rem;
+}
+ul.inline{
+    list-style: none
+}
+.navwraper{
+    margin: 0 auto;
+    max-width: 980px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.gumby-no-touch .navbar ul li:hover > a, .gumby-touch .navbar ul li.active > a{
+    background: lightgrey;
+}
+a.label:hover{
+    color:whitesmoke;
+}
+.pager li>a{
+    border: 1px solid #d04526;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 2px 2px 2px 5px;
+}
+.pager li>a:hover{
+ /*   background-color: lightgrey;*/
+    border: 3px solid #d04526;
+}
+.backtotop{
+    margin-right: 5px;
+}
