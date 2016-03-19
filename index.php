@@ -26,13 +26,14 @@ include_once JPATH_THEMES . '/' . $this->template . '/getparams.php';
     <link rel="apple-touch-icon" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/apple-touch-icon.png">
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/normalize.css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/gumby.css" />
-    <?php if ($customCSS != -1) : ?>
+       <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/gumberstyle.css" />
+        <?php if ($customCSS != -1) : ?>
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/<?php echo $customCSS ?>" />
     <?php endif; ?>
 
     <?php
-    $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/libs/modernizr-2.6.2.min.js');
     JHtml::_('jquery.framework');
+    $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/libs/modernizr-2.6.2.min.js'); 
     ?>
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -110,22 +111,25 @@ endif;
             <?php if ($this->countModules('above-content')) : ?>
                 <div class="above-content">
                     <!--above-content-->
+                    <div class="row">
                     <jdoc:include type="modules" name="above-content" style="gumber" />
+                    </div>
                 </div>
             <?php endif; ?>            
 
             <?php if ($this->countModules('breadcrumbs')) : ?>
                 <div class="breadcrumbs-row">
                     <div class="wrapper">
-                        <div class="12 columns">
+                        <div class="row">
                             <jdoc:include type="modules" name="breadcrumbs" style="none" />
                         </div>
                     </div>
                 </div>
             <?php endif; ?> 
-
+            <div class="row">
             <jdoc:include type="message" />  
             <jdoc:include type="component" />
+            </div>
             <?php if ($this->countModules('below-content')) : ?>
                 <section class="below-content">
                     <!--below-content-->
@@ -176,34 +180,40 @@ endif;
 
     <!-- Credit Row Taken from https://github.com/nternetinspired/OneWeb -->         
     <footer class="row">
-        <div class="ten columns">
+        <div class="ten columns text-left">
         <?php if ($social > 0) : ?>
 
             <ul class="social">
                 <?php if ($twitterLink != "") : ?>
-                    <li><a class="twitter" href="<?php echo ($twitterLink); ?>" title="Follow me on Twitter" target="_blank"><i class="icon-twitter large"></i></a></li>
-                <?php endif; ?>
-                <?php if ($dribbbleLink != "") : ?>
-                    <li><a class="dribbble" href="<?php echo ($dribbbleLink); ?>" title="See my latest work at Dribbble" target="_blank"><i class="icon-dribbble large"></i></a></li>
+                    <li><a class="twitter" href="<?php echo ($twitterLink); ?>" title="<?php echo JText::_('TPL_GUMBER_TWITTER_LABEL'); ?>" target="_blank"><i class="icon-twitter large"></i></a></li>
                 <?php endif; ?>
                 <?php if ($facebookLink != "") : ?>
-                    <li><a class="facebook" href="<?php echo ($facebookLink); ?>" title="Follow us on Facebook" target="_blank"><i class="icon-facebook large"></i></a></li>
+                    <li><a class="facebook" href="<?php echo ($facebookLink); ?>" title="<?php echo JText::_('TPL_GUMBER_FACEBOOK_LABEL'); ?>" target="_blank"><i class="icon-facebook large"></i></a></li>
                 <?php endif; ?>
                 <?php if ($googleplusLink != "") : ?>
-                    <li><a class="googleplus" href="<?php echo ($googleplusLink); ?>" title="Find me on G+" target="_blank"><i class="icon-gplus large"></i></a></li>
+                    <li><a class="googleplus" href="<?php echo ($googleplusLink); ?>" title="<?php echo JText::_('TPL_GUMBER_GOOGLEPLUS_LABEL'); ?>" target="_blank"><i class="icon-gplus large"></i></a></li>
+                <?php endif; ?>
+                <?php if ($instagramLink != "") : ?>
+                    <li><a class="instagram" href="<?php echo ($instagramLink); ?>" title="<?php echo JText::_('TPL_GUMBER_INSTAGRAM_LABEL'); ?>" target="_blank"><i class="icon-instagram large"></i></a></li>
+                <?php endif; ?>
+                <?php if ($pinterestLink != "") : ?>
+                    <li><a class="instagram" href="<?php echo ($pinterestLink); ?>" title="<?php echo JText::_('TPL_GUMBER_PINTEREST_LABEL'); ?>" target="_blank"><i class="icon-pinterest large"></i></a></li>
                 <?php endif; ?>
                 <?php if ($linkedinLink != "") : ?>
-                    <li><a href="<?php echo ($linkedinLink); ?>" title="Connect on Linkedin" target="_blank"><i class="icon-linkedin large"></i></a></li>
+                    <li><a href="<?php echo ($linkedinLink); ?>" title="<?php echo JText::_('TPL_GUMBER_LINKEDIN_LABEL'); ?>" target="_blank"><i class="icon-linkedin large"></i></a></li>
+                <?php endif; ?>
+                <?php if ($dribbbleLink != "") : ?>
+                    <li><a class="dribbble" href="<?php echo ($dribbbleLink); ?>" title="<?php echo JText::_('TPL_GUMBER_DRIBBBLE_LABEL'); ?>" target="_blank"><i class="icon-dribbble large"></i></a></li>
                 <?php endif; ?>
                 <?php if ($githubLink != "") : ?>
-                    <li><a class="github" href="<?php echo ($githubLink); ?>" title="All the code" target="_blank"><i class="icon-github large"></i></a></li>
+                    <li><a class="github" href="<?php echo ($githubLink); ?>" title="<?php echo JText::_('TPL_GUMBER_GITHUB_LABEL'); ?>" target="_blank"><i class="icon-github large"></i></a></li>
                 <?php endif; ?>
             </ul>
 
         <?php endif; ?>
         </div>
         <div class="two columns text-right">
-            <a href="#top"class="backtotop">Back to top</a>
+            <a href="#top"class="backtotop"><?php echo JText::_('TPL_GUMBER_BACKTOTOP') ?></a>
         </div>
         <div class="twelve columns text-center">
             <small>&copy; <?php echo date("Y"); ?> <?php echo htmlspecialchars($app->getCfg('sitename')); ?></small>
@@ -212,19 +222,14 @@ endif;
 
     </footer>
     <!-- end of credit row -->
-
-    <script gumby-touch="js/libs" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/gumby.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.fixed.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.skiplink.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.toggleswitch.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.tabs.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.radiobtn.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.checkbox.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.navbar.js"></script>
+    
+    <script gumby-touch="js/libs" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/gumby.min.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/jquery.validation.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/gumby.images.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/gumby.init.js"></script>
-
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby-all.min.js"></script>
+     <?php  // $doc->addScript($this->baseurl. '/templates/' . $this->template . '/js/libs/ui/gumby-all.min.js'); 
+     ?>
 
 <!--[if lte IE 8]>  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/respond.js"></script> <![endif]-->
 

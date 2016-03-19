@@ -29,14 +29,14 @@ $customCSS = $params->get('customCSS');
     <jdoc:include type="head" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/normalize.css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/gumby.css" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/owl-carousel/owl.theme.css" />
     <?php if ($customCSS != -1) : ?>
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/<?php echo $customCSS ?>" />
     <?php endif; ?>
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/jquery-2.0.2.min.js"></script>
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/modernizr-2.6.2.min.js"></script>
     <title><?php echo htmlspecialchars($params->get('sitetitle')); ?></title>
 </head>
 <body>
@@ -78,7 +78,7 @@ $customCSS = $params->get('customCSS');
     <div class="row text-center">
         <small>&copy; <?php echo date("Y"); ?> <?php echo htmlspecialchars($params->get('sitetitle')); ?></small>
     </div>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/jquery-2.0.2.min.js"></script>
+    
     <script gumby-touch="js/libs" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/gumby.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.fixed.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/ui/gumby.skiplink.js"></script>

@@ -91,7 +91,7 @@
                 <field name="setGeneratorTag" type="text" default="" label="TPL_SETTINGS_GENERATOR_LABEL" description="TPL_SETTINGS_GENERATOR_DESC" size="85" />
                 <field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_SETTINGS_ANALYTICS_LABEL" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" />
                 <field name="topbarTitle" type="text" default="my Joomla site" label="TPL_SETTINGS_TOPBAR_LABEL" description="TPL_SETTINGS_TOPBAR_DESC" size="15" />
-                <field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/gumber/css/" filter="" exclude="gumby\.css|effects\.css|normalize\.css|index\.html" stripext="" />
+                <field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/gumber/css/" filter="" exclude="gumber\.css|gumby\.css|effects\.css|normalize\.css|index\.html" stripext="" />
                 <field name="rightwidth" type="list" class="btn-group" default="4" label="TPL_SETTINGS_RIGHTWIDTH" description="TPL_SETTINGS_ANALYTICS_DESC" size="15">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -110,23 +110,14 @@
                 </field>
             </fieldset>			
             <fieldset name="SOCIAL" label="TPL_SETTINGS_SOCIAL_LABEL">
-                <field name="twitter" type="text" default="" label="TPL_SETTINGS_TWITTER_LABEL" description="TPL_SETTINGS_TWITTER_DESC" />
                 <field name="twitterLink" type="text" default="" label="TPL_SETTINGS_TWITTER_LINK_LABEL" description="TPL_SETTINGS_TWITTER_LINK_DESC" filter="raw" />
-
-                <field name="dribbble" type="text" default="" label="TPL_SETTINGS_DRIBBBLE_LABEL" description="TPL_SETTINGS_DRIBBBLE_DESC" />
-                <field name="dribbbleLink" type="text" default="" label="TPL_SETTINGS_DRIBBBLE_LINK_LABEL" description="TPL_SETTINGS_DRIBBBLE_LINK_DESC" filter="raw" />
-
-                <field name="facebook" type="text" default="" label="TPL_SETTINGS_FACEBOOK_LABEL" description="TPL_SETTINGS_FACEBOOK_DESC" />
+                <field name="instagramLink" type="text" default="" label="TPL_SETTINGS_INSTAGRAM_LINK_LABEL" description="TPL_SETTINGS_INSTAGRAM_LINK_DESC" filter="raw" />
                 <field name="facebookLink" type="text" default="" label="TPL_SETTINGS_FACEBOOK_LINK_LABEL" description="TPL_SETTINGS_FACEBOOK_LINK_DESC" filter="raw" />
-
-                <field name="googleplus" type="text" default="" label="TPL_SETTINGS_GOOGLEPLUS_LABEL" description="TPL_SETTINGS_GOOGLEPLUS_DESC" />
                 <field name="googleplusLink" type="text" default="" label="TPL_SETTINGS_GOOGLEPLUS_LINK_LABEL" description="TPL_SETTINGS_GOOGLEPLUS_LINK_DESC" filter="raw" />
-                
-                <field name="linkedin" type="text" default="" label="TPL_SETTINGS_LINKEDIN_LABEL" description="TPL_SETTINGS_LINKEDIN_DESC" />
-                <field name="linkedinLink" type="text" default="" label="TPL_SETTINGS_LINKEDIN_LINK_LABEL" description="TPL_SETTINGS_LINKEDIN_LINK_DESC" filter="raw" />
-                
-                <field name="github" type="text" default="" label="TPL_SETTINGS_GITHUB_LABEL" description="TPL_SETTINGS_GITHUB_DESC" />
+                <field name="pinterestLink" type="text" default="" label="TPL_SETTINGS_PINTEREST_LINK_LABEL" description="TPL_SETTINGS_PINTEREST_LINK_DESC" filter="raw" />
+                <field name="linkedinLink" type="text" default="" label="TPL_SETTINGS_LINKEDIN_LINK_LABEL" description="TPL_SETTINGS_LINKEDIN_LINK_DESC" filter="raw" />              
                 <field name="githubLink" type="text" default="" label="TPL_SETTINGS_GITHUB_LINK_LABEL" description="TPL_SETTINGS_GITHUB_LINK_DESC" filter="raw" />
+                <field name="dribbbleLink" type="text" default="" label="TPL_SETTINGS_DRIBBBLE_LINK_LABEL" description="TPL_SETTINGS_DRIBBBLE_LINK_DESC" filter="raw" />
             </fieldset>
         </fields>
     </config>
